@@ -1,0 +1,29 @@
+.inputDiv{
+    margin-top:10px;
+}
+.inputBox{
+    width: 25%;
+    height: 35px;
+}
+.addBtn{
+    padding: 10px 18px;
+    margin-left: 5px;
+    background-color: green;
+    border-radius: 10px;
+}
+.itemList{
+    margin: auto;
+    width: 30%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.items{
+    font-size: 20px;
+    font-weight: 600;
+}
+.deleteBtn{
+    font-size: 20px;
+    background-color: red;
+    border-radius: 10px;
+}
