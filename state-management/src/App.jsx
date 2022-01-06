@@ -1,23 +1,22 @@
-import React, {useState} from 'react'
-import "./App.css"
+import {useState} from "react";
+import './App.css';
+import Counter from './components/counter';
+console.log(Counter);
 
-const App = () => {
+function App() {
+const [count,setCount] = useState(0);
 
-    const [count, setCount] = useState(0)
-
-    const HandleNumber = (value) => {
-        setCount(count + value)
-    }
-    const HandleMulti = (value) => {
-        setCount(count * value)
-    }
-
-    return (
-        <div className='App'>
-            <h1>{count}</h1>
-            <Counter fn={HandleNumber} mult={HandleMulti}/>
-        </div>
-    )
+const changeCount = (value) =>{
+  setCount(count + value);
+}
+const double = (value) =>{
+  setCount(count * value);
+}
+  return (
+    <div className="App">
+      <Counter changeCount={changeCount} double={double}  count={count} />
+    </div>
+  );
 }
 
-export default App
+export default App;
