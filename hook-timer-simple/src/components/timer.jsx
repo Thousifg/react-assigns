@@ -19,7 +19,7 @@ export const Timer = ({ startTime, endTime }) => {
       );
       clearInterval(id);
     };
-  }, []);
+  },);
 
   return <div>Timer is : {sTime}</div>;
 };
