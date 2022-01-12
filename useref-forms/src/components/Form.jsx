@@ -18,7 +18,6 @@ export const Form = () => {
         getData(page);
     }, [page]);
 
-
     const getData = (page) => {
 
         setIsLoading(true)
