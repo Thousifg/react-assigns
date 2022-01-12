@@ -17,7 +17,7 @@ export const Product = () => {
       {data.map((e,i)=> (
         <Link key={e.id} to={`/product/${e.id}`} style={{textDecoration: "none"}}>
             <Div>
-                <img src={e.api_featured_image} style={{width: '100ppx', height: '100px'}}/> 
+                <img src={e.api_featured_image} style={{width: '100ppx', height: '100px'}} alt=""/>
                 <h2><span style={{color:"red"}}>Brand:-</span> {e.brand} </h2>
                 {e.category == null ? <p>category:- {e.product_type}</p>:<p>category:- {e.category}</p>}
                 {/* <p>category:- {e.category}</p> */}

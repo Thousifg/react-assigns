@@ -12,7 +12,7 @@ export const ProductDetails = () => {
       .then((e) => setData(e));
   };
   console.log(data.length);
-  return data.brand != undefined ? (
+  return data.brand !== undefined ? (
     <>
       <div>
         <h1 style={{color:"red"}}>Product Details</h1>
