@@ -1,44 +1,26 @@
-import { useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { AuthContext } from "../contexts/AuthContext";
+import React,{useContext} from 'react'
+import { useNavigate, Navigate } from 'react-router-dom'
+import { AuthContext } from '../Context/AuthContext'
 
-export const Login = () => {
-    const { handleToken } = useContext(AuthContext);
-    const [form, setForm] = useState({});
-    const navigate = useNavigate();
-    const handleChange = ({ target: { name, value } }) => {
-        setForm({
-            ...form,
-            [name]: value,
-        });
-    };
+const Login = () => {
+
+    const {handleToken, token}  = useContext(AuthContext)
+    const navigate = useNavigate()
+
+    if(token) {
+     return   <Navigate to={"/"} />
+    }
+
     return (
         <div>
-            <h2>Login</h2>
-            <label style={{marginRight:"29px"}}>Email:- </label>
-            <input
-                onChange={handleChange}
-                type="text"
-                name="username"
-                placeholder="Enter Username"
-            ></input>
-            <br />
-            <label>Password:-</label>
-            <input
-                onChange={handleChange}
-                type="text"
-                name="password"
-                placeholder="Enter Password"
-            ></input>
-            <br />
-            <button
-                onClick={() => {
-                    handleToken("jagantoken");
-                    navigate(-1);
-                }}
-            >
-                Submit
-            </button>
+            <input type="text" placeholder='email'/>
+            <input type="text" placeholder='password'/>
+            <button onClick={() => {
+                handleToken("1234567")
+                navigate("/")
+            }}>Login</button>
         </div>
-    );
-};
+    )
+}
+
+export default Login

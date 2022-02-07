@@ -1,16 +1,14 @@
-import { Link } from "react-router-dom";
+import React from "react";
+import { Nav, link } from "../styles/Style";
+import {Link} from "react-router-dom"
 
-export const Navbar = () => {
-    return <>
-        <div style={{ width:"100%", height:"60px", backgroundColor:"black",display:"flex", justifyContent:"center"}}>
-            <Link to="/" style={{textDecoration: "none", fontWeight:"bold", color:"white", margin:"20px" }}>Home</Link>
-            <Link to="/dashboard" style={{ textDecoration: "none" ,fontWeight:"bold", color:"white", margin:"20px" }}>
-                Dashboard
-            </Link>
-            <Link to="/settings" style={{ textDecoration: "none" , fontWeight:"bold", color:"white", margin:"20px"}}>Settings</Link>
-            <Link to="/login" style={{ textDecoration: "none", fontWeight:"bold", color:"white", margin:"20px"}}>
-                Login
-            </Link>
-        </div>
-    </>
-}
+const Navbar = () => {
+  return <Nav>
+      <Link style={link} to="/">Home</Link>
+      <Link style={link} to="/login">Login</Link>
+      <Link style={link} to="/dashboard">Dashboard</Link>
+      <Link style={link} to="/dashboard/setting">Settings</Link>
+  </Nav>;
+};
+
+export default Navbar;

@@ -1,7 +1,11 @@
-export const Settings = () => {
-    return <>
-        <div>
-            <img style={{width:"100%", height:"100vh"}} src="https://static.collectui.com/shots/2312396/day-007-settings-dailyui-large" alt="" />
-        </div>
-    </>
+import React from 'react'
+
+const Setting = () => {
+    return (
+        <h1>
+        Settings     
+        </h1>
+    )
 }
+
+export default Setting
