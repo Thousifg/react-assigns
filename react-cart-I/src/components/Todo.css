@@ -1,0 +1,7 @@
+.dataHover{
+    transition: transform .2s;
+}
+.dataHover:hover{
+    transform: scale(1.025);
+    cursor: pointer;
+}
