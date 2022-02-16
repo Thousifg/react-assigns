@@ -1,0 +1,9 @@
+.todos {
+    width: 30%;
+    margin: auto;
+    margin-top: 20px;
+    background-color: rgb(91, 101, 236);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
